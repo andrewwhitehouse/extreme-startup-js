@@ -9,10 +9,11 @@ var  { jamesBond } = require('./solutions/jamesBond');
 var  { multiply } = require('./solutions/multiply')
 var  { squareAndCube } = require('./solutions/square-and-cube')
 var  { primeMinister } = require('./solutions/primeMinister')
+var  { fibonacci } = require('./solutions/fibonacci')
 
 /* Reimplement this function to answer questions. */
 var answer = function(question, req, res) {
-    let funcs = [largest, plus, multiply, squareAndCube, jamesBond, primes, primeMinister, minus];
+    let funcs = [largest, plus, multiply, squareAndCube, jamesBond, primes, primeMinister, minus, fibonacci];
     for(let func of funcs) {
       let result = func(question);
       if (result !== undefined) {
