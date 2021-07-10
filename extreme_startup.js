@@ -11,6 +11,7 @@ var  { squareAndCube } = require('./solutions/square-and-cube')
 var  { primeMinister } = require('./solutions/primeMinister')
 var  { fibonacci } = require('./solutions/fibonacci')
 var  { landmarkCity } = require('./solutions/landmarkCity')
+var  { colour } = require('./solutions/colour')
 
 /* Reimplement this function to answer questions. */
 var answer = function(question, req, res) {
@@ -18,7 +19,7 @@ var answer = function(question, req, res) {
     return "specific 'q' query parameter";
   }
   let funcs = [largest, plus, multiply, squareAndCube, jamesBond,
-    primes, primeMinister, minus, fibonacci, landmarkCity];
+    primes, primeMinister, minus, fibonacci, landmarkCity, colour];
   for(let func of funcs) {
     let result = func(question);
     if (result !== undefined) {
