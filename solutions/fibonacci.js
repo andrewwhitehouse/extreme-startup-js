@@ -16,8 +16,8 @@ function fib(index) {
 function fibonacci(question) {
   let matched = question.match(/what is the (\d+).+ number in the Fibonacci sequence/)
   if (matched !== null) {
-    let position = parseInt(matched[1]);
-    return "" + fib(position-1);
+    let index = parseInt(matched[1]);
+    return "" + fib(index);
   }
   console.log(`Question ${question} didn't match fibonacci`);
   return undefined;

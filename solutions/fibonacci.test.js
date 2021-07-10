@@ -4,6 +4,6 @@ const { fibonacci } = require('./fibonacci');
 
 describe('finds Fibonacci numbers', () => {
   it('finds nth number in sequence', () => {
-    expect(fibonacci("4ca90b00: what is the 5th number in the Fibonacci sequence")).toBe("3");
+    expect(fibonacci("2376df80: what is the 6th number in the Fibonacci sequence")).toBe("8");
   })
 });
