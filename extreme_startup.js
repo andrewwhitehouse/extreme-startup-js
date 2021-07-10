@@ -3,6 +3,7 @@ var session = require('express-session');
 var cookieParser = require('cookie-parser');
 var  { largest } = require('./solutions/largest');
 var  { plus } = require('./solutions/plus');
+var  { minus } = require('./solutions/minus');
 var  { primes } = require('./solutions/primes');
 var  { jamesBond } = require('./solutions/jamesBond');
 var  { multiply } = require('./solutions/multiply')
@@ -11,7 +12,7 @@ var  { primeMinister } = require('./solutions/primeMinister')
 
 /* Reimplement this function to answer questions. */
 var answer = function(question, req, res) {
-    let funcs = [largest, plus, multiply, squareAndCube, jamesBond, primes, primeMinister];
+    let funcs = [largest, plus, multiply, squareAndCube, jamesBond, primes, primeMinister, minus];
     for(let func of funcs) {
       let result = func(question);
       if (result !== undefined) {
