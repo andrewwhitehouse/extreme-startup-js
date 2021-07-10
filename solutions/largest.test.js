@@ -7,7 +7,4 @@ describe('largest', () => {
   it('finds another largest', () => {
     expect(largest("20f63b80: which of the following numbers is the largest: 54, 605")).toBe("605");
   })
-  it('returns undefined for unrecognised question', () => {
-    expect(largest("here is a question")).toBe(undefined);
-  })
 });

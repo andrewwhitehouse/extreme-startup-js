@@ -7,7 +7,7 @@ function largest(question) {
       return "" + max;
     }
   }
-  console.log(`Question ${question} didn't match longest`);
+  console.log(`Question ${question} didn't match largest`);
   return undefined;
 }
 

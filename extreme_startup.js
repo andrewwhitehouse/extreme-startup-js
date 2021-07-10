@@ -10,17 +10,22 @@ var  { multiply } = require('./solutions/multiply')
 var  { squareAndCube } = require('./solutions/square-and-cube')
 var  { primeMinister } = require('./solutions/primeMinister')
 var  { fibonacci } = require('./solutions/fibonacci')
+var  { landmarkCity } = require('./solutions/landmarkCity')
 
 /* Reimplement this function to answer questions. */
 var answer = function(question, req, res) {
-    let funcs = [largest, plus, multiply, squareAndCube, jamesBond, primes, primeMinister, minus, fibonacci];
-    for(let func of funcs) {
-      let result = func(question);
-      if (result !== undefined) {
-        return result;
-      }
+  if (question === undefined) {
+    return "specific 'q' query parameter";
+  }
+  let funcs = [largest, plus, multiply, squareAndCube, jamesBond,
+    primes, primeMinister, minus, fibonacci, landmarkCity];
+  for(let func of funcs) {
+    let result = func(question);
+    if (result !== undefined) {
+      return result;
     }
-    return `Question ${question} not recognised`;
+  }
+  return `Question ${question} not recognised`;
 };
 
 var app = express();
