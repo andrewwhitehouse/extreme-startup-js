@@ -4,4 +4,7 @@ describe('adds numbers', () => {
   it('finds sum', () => {
     expect(plus("5d146be0: what is 11 plus 5")).toBe("16");
   })
+  it('finds sum', () => {
+    expect(plus("5d146be0: what is 8 plus 5 plus 11")).toBe("24");
+  })
 });
