@@ -25,9 +25,16 @@ function plus3(question) {
     let num1 = parseInt(matched[1]);
     let num2 = parseInt(matched[3]);
     let num3 = parseInt(matched[5]);
-    let result1 = (op1 == "plus") ? (num1+num2) : (op1 == "minus" ? (num1-num2) : num1*num2);
-    let result2 = (op2 == "plus") ? (result1+num3) : (op2 == "minus" ? (result1-num3) : result1*num3);
-    return "" + result2;
+    let result = 0;
+    if (op2 === "multiplied by") {
+      let result2 = num2 * num3;
+      result = (op1 == "plus") ? (num1 + result2) : (op1 == "minus" ? (num1 - result2) : num1 * result2);
+    } else {
+      let result1 = (op1 == "plus") ? (num1+num2) : (op1 == "minus" ? (num1-num2) : num1*num2);
+      result = (op2 == "plus") ? (result1+num3) : (op2 == "minus" ? (result1-num3) : result1*num3);
+    }
+
+    return "" + result;
   }
   console.log(`Question ${question} didn't match plus3`);
   return undefined;

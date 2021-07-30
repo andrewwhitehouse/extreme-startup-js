@@ -10,4 +10,8 @@ describe('adds numbers', () => {
   it('finds combination', () => {
     expect(calculate("b117bb20: what is 19 multiplied by 16 plus 11")).toBe("315");
   })
+  it('finds combination', () => {
+    expect(calculate("b2cf3470: what is 1 plus 5 multiplied by 19")).toBe("96");
+  })
 });
+
