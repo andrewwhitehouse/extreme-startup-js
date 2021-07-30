@@ -2,7 +2,7 @@ var express = require("express");
 var session = require('express-session');
 var cookieParser = require('cookie-parser');
 var  { largest } = require('./solutions/largest');
-var  { plus } = require('./solutions/plus');
+var  { plus } = require('./solutions/calculate');
 var  { minus } = require('./solutions/minus');
 var  { primes } = require('./solutions/primes');
 var  { jamesBond } = require('./solutions/jamesBond');
@@ -19,7 +19,7 @@ var answer = function(question, req, res) {
   if (question === undefined) {
     return "specific 'q' query parameter";
   }
-  let funcs = [largest, plus, multiply, squareAndCube, jamesBond,
+  let funcs = [largest, calculate, multiply, squareAndCube, jamesBond,
     primes, primeMinister, minus, fibonacci, landmarkCity, colour, power];
   for(let func of funcs) {
     let result = func(question);
