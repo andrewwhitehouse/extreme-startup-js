@@ -14,6 +14,7 @@ var  { landmarkCity } = require('./solutions/landmarkCity')
 var  { colour } = require('./solutions/colour')
 var  { power } = require('./solutions/power')
 var  { scrabbleScore } = require('./solutions/scrabble')
+var  { anagram } = require('./solutions/anagram')
 
 /* Reimplement this function to answer questions. */
 var answer = function(question, req, res) {
@@ -22,7 +23,7 @@ var answer = function(question, req, res) {
   }
   let funcs = [largest, calculate, multiply, squareAndCube, jamesBond,
     primes, primeMinister, minus, fibonacci, landmarkCity, colour, power,
-    scrabbleScore];
+    scrabbleScore, anagram];
   for(let func of funcs) {
     let result = func(question);
     if (result !== undefined) {
